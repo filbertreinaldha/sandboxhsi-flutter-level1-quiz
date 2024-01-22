@@ -7,7 +7,9 @@ num add(List<num> input) => input[0] + input[1];
 num sub(List<num> input) => input[0] - input[1];
 num mul(List<num> input) => input[0] * input[1];
 String div(List<num> input) =>
-    ((input[0] / input[1]) as double).toStringAsFixed(3);
+    input[1] == 0
+    ? 'Undefined'
+    : ((input[0] ~/ input[1]) as double).toStringAsFixed(3);
 String mod(List<num> input) =>
     input[1] == 0 ? 'Undefined' : (input[0] % input[1]).toString();
 
